@@ -31,12 +31,12 @@ class Settings:
 
     debug: bool = os.getenv("DEBUG", "False").lower() == "true"
 
-    default_timeout: int = int(os.getenv("DEFAULT_TIMEOUT", 2))
+    default_timeout: float = float(os.getenv("DEFAULT_TIMEOUT", 1.0))
 
     default_port_start: int = int(os.getenv("DEFAULT_PORT_START", 1))
     default_port_end: int = int(os.getenv("DEFAULT_PORT_END", 1024))
 
-    max_threads: int = int(os.getenv("MAX_THREADS", 100))
+    max_threads: int = int(os.getenv("MAX_THREADS", 32))
 
     output_directory: str = os.getenv("OUTPUT_DIRECTORY", "outputs")
 
